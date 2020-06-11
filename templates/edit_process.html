@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="col-md-5">
+    <div class="card card-body">
+        <form action="/update_process/{{ registro_for_html.0 }}" method="POST">
+            <div class="form-group">
+                <input type="text" name="proceso_form" placeholder="proceso"  class="form-control" value="{{ registro_for_html.0 }}">
+                <input type="text" name="predecesor_form" placeholder="predecesor" class="form-control" value="{{ registro_for_html.1 }}">
+                <input type="text" name="tabla_form" placeholder="tabla"  class="form-control" value="{{ registro_for_html.2 }}">
+                <button type="submit" class="btn btn-secondary btn-block">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
